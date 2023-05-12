@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "981846682de6618409fb7036ebc7d1ac",
+    "content-hash": "213b17f4e05fba22b278441d7dd70fa4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1818,30 +1818,29 @@
         },
         {
             "name": "drupal/site_audit",
-            "version": "3.0.0-rc4",
+            "version": "dev-4.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/site_audit.git",
-                "reference": "8.x-3.0-rc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/site_audit-8.x-3.0-rc4.zip",
-                "reference": "8.x-3.0-rc4",
-                "shasum": "99b84c9a05f3b9c9255f5570a96463edd8d0a551"
+                "reference": "403f6b301b63e1c2c3470d2dcdbd2184955d1943"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
-                "php": ">=5.6.0"
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/site_audit_report_entity": "*"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.0-rc4",
-                    "datestamp": "1657821381",
+                    "version": "4.0.0-beta1+0-dev",
+                    "datestamp": "1683892916",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -1881,26 +1880,27 @@
         },
         {
             "name": "drupal/site_audit_server",
-            "version": "dev-4.x",
+            "version": "dev-4.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/site_audit_server.git",
-                "reference": "6c495d7db501794ee08c6eb352d3d7082d5fa72d"
+                "reference": "04e69e5b706a185a64fc5cf9fb622d9dc8ee4390"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
                 "drupal/key_auth": "*",
                 "drupal/restui": "*",
-                "drupal/site_audit": "*"
+                "drupal/site_audit": "^4.0@dev",
+                "php": ">=5.6.0"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-4.x": "4.x-dev"
+                    "dev-4.0.x": "4.0.x-dev"
                 },
                 "drupal": {
-                    "version": "4.0.0+2-dev",
-                    "datestamp": "1682626425",
+                    "version": "4.0.0+3-dev",
+                    "datestamp": "1683912143",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1914,10 +1914,11 @@
             "authors": [
                 {
                     "name": "Jon Pugh",
-                    "homepage": "https://www.drupal.org/user/17028"
+                    "homepage": "https://www.drupal.org/user/17028",
+                    "email": "jon@thinkdrop.net"
                 }
             ],
-            "description": "Provides an API endpoint to receive site audit reports.",
+            "description": "This extension provides a rest endpoint for receiving site audit entities.",
             "homepage": "https://www.drupal.org/project/site_audit_server",
             "support": {
                 "source": "https://git.drupalcode.org/project/site_audit_server"
@@ -11194,6 +11195,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/site_audit": 20,
         "drupal/site_audit_server": 20
     },
     "prefer-stable": true,
