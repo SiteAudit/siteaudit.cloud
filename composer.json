@@ -86,5 +86,15 @@
         },
         "patches": {
         }
+    },
+    "scripts": {
+        "deploy:build": [
+            "composer --no-interaction --no-dev install --no-progress --prefer-dist --optimize-autoloader"
+        ],
+        "deploy:update": [
+            "drush updb --yes",
+            "drush cr",
+            "drush status"
+        ]
     }
 }
