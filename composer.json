@@ -25,6 +25,7 @@
         "drupal/core-recommended": "^9.4",
         "drupal/site_audit_server": "^4.0@dev",
         "drupal/social_auth": "^4.0",
+        "drupal/social_auth_google": "^4.0",
         "drush/drush": "^11.0",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
