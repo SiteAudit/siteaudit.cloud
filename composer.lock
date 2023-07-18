@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "213b17f4e05fba22b278441d7dd70fa4",
+    "content-hash": "d9ab7d05255a729940df98e43814254a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1814,6 +1814,52 @@
             "homepage": "https://www.drupal.org/project/restui",
             "support": {
                 "source": "https://git.drupalcode.org/project/restui"
+            }
+        },
+        {
+            "name": "drupal/site-site",
+            "version": "dev-1.10.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/site.git",
+                "reference": "7b5120ed93f2b90d48f322bd61dbc91647b110e9"
+            },
+            "require": {
+                "drupal/admin_toolbar": "^3.4",
+                "drupal/core": ">=8"
+            },
+            "require-dev": {
+                "drupal/key_auth": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.10.x": "1.10.x-dev"
+                },
+                "drupal": {
+                    "version": "1.10.0-alpha6+16-dev",
+                    "datestamp": "1689686546",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028",
+                    "email": "jon@thinkdrop.net"
+                }
+            ],
+            "description": "Provides a Site entity about your website. Tracks state, metadata, and configuration changes over time using revisions.",
+            "homepage": "https://www.drupal.org/project/site",
+            "support": {
+                "source": "https://git.drupalcode.org/project/site"
             }
         },
         {
@@ -11195,6 +11241,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/site-site": 20,
         "drupal/site_audit": 20,
         "drupal/site_audit_server": 20
     },
